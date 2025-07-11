@@ -52,7 +52,7 @@ model Image {
 }
 
 model Message {
-  id         Int    @id @default(autoincrement())
+  id         String @id @default(uuid())
   message    String
   home_id    String
   home       Home   @relation(fields: [home_id], references: [id])
