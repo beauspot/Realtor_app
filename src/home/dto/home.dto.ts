@@ -126,6 +126,7 @@ export class CreateHomeDTO {
 
 export class UpdateHomeDTO {
     @IsOptional()
+    @IsString()
     @IsNotEmpty()
     address?: string;
 
@@ -158,4 +159,10 @@ export class UpdateHomeDTO {
     @IsOptional()
     @IsEnum(PropertyType)
     propertyType?: PropertyType;
+}
+
+export class InquireDTO {
+    @IsString()
+    @IsNotEmpty()
+    message: string
 }
